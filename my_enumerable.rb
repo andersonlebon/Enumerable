@@ -21,4 +21,13 @@ module MyEnumerable
     each { |e| filtered.push(e) if yield e }
     filtered
   end
+
+  def max?
+    max = nil
+    each do |e|
+      max = e if max.nil?
+      max = e if max < e
+    end
+    max
+  end
 end
