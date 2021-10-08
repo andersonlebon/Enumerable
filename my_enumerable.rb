@@ -9,4 +9,10 @@ module MyEnumerable
     true
   end
 
-
+  def any?
+    each do |e|
+      return true if yield e
+    end
+    false
+  end
+end
