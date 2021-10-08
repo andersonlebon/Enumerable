@@ -30,4 +30,13 @@ module MyEnumerable
     end
     max
   end
+
+  def min?
+    min = nil
+    each do |e|
+      min = e if min.nil?
+      min = e if min > e
+    end
+    min
+  end
 end
