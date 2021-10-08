@@ -15,4 +15,10 @@ module MyEnumerable
     end
     false
   end
+
+  def filter
+    filtered = []
+    each { |e| filtered.push(e) if yield e }
+    filtered
+  end
 end
