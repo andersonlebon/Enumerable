@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # a extension for the list object, to be able to make use of it's each function
 module MyEnumerable
   def all?
